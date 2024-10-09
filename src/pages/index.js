@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={LPtheme}>
       <Head>
-        <title>Presentation</title>
+        <title>App-DevZone</title>
         <meta name="description" content="Powered by App-DevZone" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

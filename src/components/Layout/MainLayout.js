@@ -108,7 +108,7 @@ const MainLayout = ({ children }) => {
                   fontWeight: "bold",
                 }}
               >
-                Presentation
+                App-DevZone
               </Typography>
               <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3, ml: 2 }}>
                 {menuItems.map((item) => (
@@ -256,13 +256,23 @@ const MainLayout = ({ children }) => {
             © 2024 App-DevZone. All rights reserved.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-            <IconButton color="inherit" href="#">
+            <IconButton
+              color="inherit"
+              href="https://www.facebook.com/jakkapan.pakeerat.5?mibextid=LQQJ4d"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FacebookIcon />
             </IconButton>
-            <IconButton color="inherit" href="#">
+            {/* <IconButton color="inherit" href="#">
               <TwitterIcon />
-            </IconButton>
-            <IconButton color="inherit" href="#">
+            </IconButton> */}
+            <IconButton
+              color="inherit"
+              href="https://github.com/jakkapan1789"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon />
             </IconButton>
           </Box>

@@ -40,7 +40,7 @@ const Hero = () => {
             animation: "fadeInDown 1s ease-in-out",
           }}
         >
-          Presentation
+          App-DevZone
         </Typography>
         <Typography
           data-aos="flip-up"
