@@ -32,7 +32,7 @@ export default function Home() {
         <Packages />
         <Services />
         <About />
-        {/* <ClientExamples /> */}
+        <ClientExamples />
         <Contact />
       </MainLayout>
     </ThemeProvider>

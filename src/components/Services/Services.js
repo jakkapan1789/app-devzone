@@ -59,10 +59,25 @@ const Services = () => {
       title: "Custom Development",
       description: "พัฒนาฟีเจอร์เฉพาะตามความต้องการของลูกค้า",
     },
+    {
+      title: "Google Authenticator Integration",
+      description:
+        "ให้บริการผสานระบบ Google Authenticator เพื่อเพิ่มความปลอดภัยด้วยการยืนยันตัวตนสองชั้น (2FA)",
+    },
+    {
+      title: "LINE LIFF Integration",
+      description:
+        "เชื่อมต่อเว็บไซต์หรือแอปพลิเคชันของคุณกับ LINE ผ่าน LINE LIFF เพื่อการใช้งานที่ง่ายและรวดเร็ว",
+    },
+    {
+      title: "Recovery by Email",
+      description:
+        "บริการการกู้คืนบัญชีผู้ใช้งานผ่านอีเมล เพื่อความปลอดภัยและความสะดวกสบายในการยืนยันตัวตน",
+    },
   ];
 
   return (
-    <Box id="services" sx={{ py: 8, backgroundColor: "#f5f5f5" }}>
+    <Box id="services" sx={{ py: 10, backgroundColor: "#f5f5f5" }}>
       <Container maxWidth="lg">
         <Typography
           variant="h4"

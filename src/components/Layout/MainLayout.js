@@ -39,8 +39,9 @@ const MainLayout = ({ children }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavigation = (href) => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleNavigation = (href, mobile) => {
+    if (mobile) setIsMenuOpen(!isMenuOpen);
+
     router.push(href);
   };
 
@@ -115,6 +116,7 @@ const MainLayout = ({ children }) => {
                 ))}
               </Box>
             </Stack>
+            <Stack></Stack>
           </Container>
         </Toolbar>
       </AppBar>
@@ -131,8 +133,8 @@ const MainLayout = ({ children }) => {
               button
               key={item.text}
               onClick={() => {
-                handleNavigation(item.href);
-                toggleMenu();
+                // toggleMenu();
+                handleNavigation(item.href, true);
               }}
             >
               <ListItemText

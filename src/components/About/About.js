@@ -3,7 +3,7 @@ import { Box, Container, Typography } from "@mui/material";
 
 const About = () => {
   return (
-    <Box id="about" sx={{ py: 8, backgroundColor: "#f5f5f5" }}>
+    <Box id="about" sx={{ py: 10, backgroundColor: "#f5f5f5" }}>
       <Container maxWidth="lg" data-aos="fade-up" data-aos-duration="600">
         <Typography variant="h4" gutterBottom align="center">
           เกี่ยวกับเรา
