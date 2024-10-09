@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, CardMedia } from "@mui/material";
 
 const ClientExamples = () => {
   const clients = [
@@ -30,15 +30,7 @@ const ClientExamples = () => {
               aosEffect = "fade-left";
             }
             return (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={3}
-                key={index}
-                display="flex"
-                justifyContent="center"
-              >
+              <Grid item xs={12} sm={6} md={3} key={index}>
                 <Box
                   data-aos={aosEffect}
                   data-aos-duration="600"
@@ -55,12 +47,21 @@ const ClientExamples = () => {
                   }}
                 >
                   <Box sx={{ mb: 2 }}>
-                    <img
+                    <CardMedia
+                      component="img"
                       src={client.logo}
                       alt={client.name}
-                      style={{ maxWidth: "100%", height: "auto" }}
+                      // onError={(e) => {
+                      //   e.target.onerror = null; // Prevents looping
+                      //   e.target.src = "/path/to/default-image.png"; // Fallback image
+                      // }}
+                      sx={{
+                        height: 200, // Set a fixed height or adjust as needed
+                        objectFit: "contain", // Ensures the image fits within the CardMedia
+                      }}
                     />
                   </Box>
+
                   <Typography variant="h6" gutterBottom>
                     {client.name}
                   </Typography>
@@ -69,43 +70,6 @@ const ClientExamples = () => {
               </Grid>
             );
           })}
-          {/* {clients.map((client, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={3}
-              key={index}
-              display="flex"
-              justifyContent="center"
-            >
-              <Box
-                sx={{
-                  p: 3,
-                  border: "1px solid #ccc",
-                  borderRadius: "8px",
-                  textAlign: "center",
-                  cursor: "pointer",
-                  transition: "transform 0.2s, box-shadow 0.2s",
-                  ":hover": {
-                    transform: "scale(1.02)",
-                  },
-                }}
-              >
-                <Box sx={{ mb: 2 }}>
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
-                </Box>
-                <Typography variant="h6" gutterBottom>
-                  {client.name}
-                </Typography>
-                <Typography variant="body2">{client.description}</Typography>
-              </Box>
-            </Grid>
-          ))} */}
         </Grid>
       </Container>
     </Box>

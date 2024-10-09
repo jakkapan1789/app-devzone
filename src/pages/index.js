@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       <MainLayout>
         <Hero />
-        {/* <Packages /> */}
+        <Packages />
         <Services />
         <About />
         <ClientExamples />

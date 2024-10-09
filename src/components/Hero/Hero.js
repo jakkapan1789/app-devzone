@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button, Container } from "@mui/material";
 import { styled } from "@mui/system";
-
+import { useRouter } from "next/router";
 const Overlay = styled(Box)({
   position: "absolute",
   inset: 0,
@@ -10,6 +10,7 @@ const Overlay = styled(Box)({
 });
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <Box
       component="section"
@@ -49,15 +50,12 @@ const Hero = () => {
           variant="h5"
           sx={{ marginBottom: 4, animation: "fadeInUp 1s ease-in-out" }}
         >
-          {/* {`Hi, I'm Jakkapan, a freelance developer dedicated to bringing your
-          ideas to life.`} */}
           {`สวัสดีครับ ผมเบน นักพัฒนาฟรีแลนซ์ที่มุ่งมั่นในการทำให้ไอเดียของคุณเป็นจริง`}
         </Typography>
 
         <Button
           data-aos="fade-up"
           data-aos-duration="1000"
-          //   data-aos-delay="0"
           href="#contact"
           variant="contained"
           sx={{
@@ -70,8 +68,8 @@ const Hero = () => {
             "&:hover": { backgroundColor: "#e0f2ff" },
             animation: "bounce 2s infinite",
           }}
+          onClick={() => router.push("/#contact")}
         >
-          {/* Get in Touch */}
           ติดต่อเรา
         </Button>
       </Container>
