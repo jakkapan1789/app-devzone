@@ -33,6 +33,18 @@ const Contact = () => {
             // data-aos-delay="300"
           />
           <TextField
+            autoComplete="off"
+            fullWidth
+            label="โทรศัพท์"
+            size="small"
+            variant="outlined"
+            margin="normal"
+            sx={{ fontSize: "16px" }}
+            // data-aos="flip-up"
+            // data-aos-duration="500"
+            // data-aos-delay="300"
+          />
+          <TextField
             fullWidth
             autoComplete="off"
             label="อีเมล"
@@ -58,6 +70,7 @@ const Contact = () => {
             // data-aos-duration="500"
             // data-aos-delay="900"
           />
+
           <Stack
             direction="row"
             justifyContent="center"
