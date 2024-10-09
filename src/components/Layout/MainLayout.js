@@ -226,7 +226,10 @@ const MainLayout = ({ children }) => {
             <ListItem
               button
               key={item.text}
-              onClick={() => handleNavigation(item.href)}
+              onClick={() => {
+                handleNavigation(item.href);
+                toggleMenu();
+              }}
             >
               <ListItemText
                 primary={
