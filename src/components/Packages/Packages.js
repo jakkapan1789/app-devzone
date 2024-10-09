@@ -249,13 +249,13 @@ const Packages = () => {
           spacing={2}
           justifyContent="center"
           alignItems="stretch"
-          sx={{
-            backgroundColor: "white",
-            p: { xs: 2, sm: 4 },
-            borderRadius: 8,
-            maxWidth: "100%",
-            overflow: "hidden",
-          }}
+          // sx={{
+          //   backgroundColor: "white",
+          //   p: { xs: 2, sm: 4 },
+          //   borderRadius: 8,
+          //   maxWidth: "100%",
+          //   overflow: "hidden",
+          // }}
         >
           {packages.map((pkg, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>

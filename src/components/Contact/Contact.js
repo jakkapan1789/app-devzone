@@ -11,7 +11,7 @@ import {
 const Contact = () => {
   return (
     <Box id="contact" sx={{ py: 8, backgroundColor: "#f5f5f5" }}>
-      <Container maxWidth="md">
+      <Container maxWidth="md" data-aos="fade-up" data-aos-duration="1000">
         <Typography variant="h4" gutterBottom align="center">
           ติดต่อเรา
         </Typography>
@@ -27,6 +27,10 @@ const Contact = () => {
             size="small"
             variant="outlined"
             margin="normal"
+            sx={{ fontSize: "16px" }}
+            // data-aos="flip-up"
+            // data-aos-duration="500"
+            // data-aos-delay="300"
           />
           <TextField
             fullWidth
@@ -35,6 +39,10 @@ const Contact = () => {
             size="small"
             variant="outlined"
             margin="normal"
+            sx={{ fontSize: "16px" }}
+            // data-aos="flip-up"
+            // data-aos-duration="500"
+            // data-aos-delay="600"
           />
           <TextField
             fullWidth
@@ -45,6 +53,10 @@ const Contact = () => {
             margin="normal"
             multiline
             rows={4}
+            sx={{ fontSize: "16px" }}
+            // data-aos="flip-up"
+            // data-aos-duration="500"
+            // data-aos-delay="900"
           />
           <Stack
             direction="row"
@@ -53,10 +65,13 @@ const Contact = () => {
             spacing={2}
           >
             <Button
+              // data-aos="flip-up"
+              // data-aos-duration="500"
+              // data-aos-delay="1200"
               variant="contained"
               color="primary"
               type="submit"
-              sx={{ textTransform: "none" }}
+              sx={{ textTransform: "none", bgcolor: "#0046AD" }}
             >
               {/* Send Message */}
               ส่งข้อความ

@@ -34,32 +34,32 @@ const ClientExamples = () => {
                 <Box
                   data-aos={aosEffect}
                   data-aos-duration="600"
-                  sx={{
-                    p: 3,
-                    border: "1px solid #ccc",
-                    borderRadius: "8px",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    transition: "transform 0.2s, box-shadow 0.2s",
-                    ":hover": {
-                      transform: "scale(1.02)",
-                    },
-                  }}
+                  // sx={{
+                  //   p: 3,
+                  //   border: "1px solid #ccc",
+                  //   borderRadius: "8px",
+                  //   textAlign: "center",
+                  //   cursor: "pointer",
+                  //   transition: "transform 0.2s, box-shadow 0.2s",
+                  //   ":hover": {
+                  //     transform: "scale(1.02)",
+                  //   },
+                  // }}
                 >
                   <Box sx={{ mb: 2 }}>
-                    <CardMedia
-                      component="img"
+                    {/* <CardMedia
+                      // component="img"
                       src={client.logo}
                       alt={client.name}
                       // onError={(e) => {
                       //   e.target.onerror = null; // Prevents looping
                       //   e.target.src = "/path/to/default-image.png"; // Fallback image
                       // }}
-                      sx={{
-                        height: 200, // Set a fixed height or adjust as needed
-                        objectFit: "contain", // Ensures the image fits within the CardMedia
-                      }}
-                    />
+                      // sx={{
+                      //   height: 200,
+                      //   objectFit: "contain",
+                      // }}
+                    /> */}
                   </Box>
 
                   <Typography variant="h6" gutterBottom>
