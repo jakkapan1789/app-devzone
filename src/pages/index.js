@@ -12,6 +12,7 @@ import Packages from "@/components/Packages/Packages";
 import Services from "@/components/Services/Services";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
+import CourseList from "@/components/CourseList/CourseList";
 import ClientExamples from "@/components/ClientExamples/ClientExamples";
 
 export default function Home() {
@@ -32,6 +33,8 @@ export default function Home() {
         <Hero />
         <Packages />
         <Services />
+        <CourseList />
+
         <About />
         {/* <ClientExamples /> */}
         <Contact />

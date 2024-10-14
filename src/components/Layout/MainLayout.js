@@ -49,6 +49,7 @@ const MainLayout = ({ children }) => {
     { text: "หน้าหลัก", href: "/" },
     { text: "แพ็คเกจ", href: "/#package" },
     { text: "บริการของเรา", href: "/#services" },
+    { text: "คอร์สเรียนของเรา", href: "/#course" },
     { text: "เกี่ยวกับเรา", href: "/#about" },
     { text: "ติดต่อเรา", href: "/#contact" },
   ];

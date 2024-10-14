@@ -39,6 +39,7 @@ const Hero = () => {
             mt: { xs: 6, sm: 10, md: 10, lg: 10 },
             marginBottom: 4,
             animation: "fadeInDown 1s ease-in-out",
+            fontSize: { xs: 30, md: 56 },
           }}
         >
           App-DevZone

@@ -86,7 +86,6 @@ const Services = () => {
           data-aos="fade-up"
           data-aos-duration="600"
         >
-          {/* Our Services */}
           บริการของเรา
         </Typography>
         <Grid container spacing={2}>
