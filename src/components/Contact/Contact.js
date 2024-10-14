@@ -49,7 +49,7 @@ const Contact = () => {
       setTimeout(() => {
         setLoading(false);
         setOpenSuccessDialog(true);
-      }, 3000); // Adjust the time as needed (1000 = 1 second)
+      }, 2000); // Adjust the time as needed (1000 = 1 second)
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -88,6 +88,7 @@ const Contact = () => {
             autoComplete="off"
             fullWidth
             label="โทรศัพท์"
+            type="tel"
             size="small"
             variant="outlined"
             margin="normal"

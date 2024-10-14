@@ -31,10 +31,9 @@ export default function Home() {
       </Head>
       <MainLayout>
         <Hero />
-        <Packages />
         <Services />
+        <Packages />
         <CourseList />
-
         <About />
         {/* <ClientExamples /> */}
         <Contact />

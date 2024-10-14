@@ -47,9 +47,9 @@ const MainLayout = ({ children }) => {
 
   const menuItems = [
     { text: "หน้าหลัก", href: "/" },
-    { text: "แพ็คเกจ", href: "/#package" },
     { text: "บริการของเรา", href: "/#services" },
-    { text: "คอร์สเรียนของเรา", href: "/#course" },
+    { text: "แพ็คเกจ", href: "/#package" },
+    { text: "หลักสูตรอบรม", href: "/#course" },
     { text: "เกี่ยวกับเรา", href: "/#about" },
     { text: "ติดต่อเรา", href: "/#contact" },
   ];
@@ -80,10 +80,13 @@ const MainLayout = ({ children }) => {
               alignItems={"center"}
               sx={{ cursor: "pointer" }}
             >
-              <AutoAwesomeMosaicIcon sx={{ color: "#0046AD" }} />
+              <AutoAwesomeMosaicIcon
+                sx={{ color: "#0046AD" }}
+                onClick={() => handleNavigation("/")}
+              />
               <Typography
                 variant="h6"
-                to="/"
+                onClick={() => handleNavigation("/")}
                 sx={{
                   flexGrow: 1,
                   textDecoration: "none",
