@@ -9,6 +9,7 @@ import {
   Container,
   Divider,
   Stack,
+  Chip,
 } from "@mui/material";
 
 // Sample course data with images
@@ -20,6 +21,8 @@ const courses = [
     details:
       "คอร์สนี้ เราจะมาสอนคุณสู่การเป็น LINE Developer, ตั้งแต่เริ่มต้นจนถึงใช้งานจริงใน Production เช่น การ Login ด้วย LINE LIFF รวมถึงส่งข้อความหาไลน์โดยเลือกเป้าหมาย ด้วย Mesaaging API",
     image: "https://via.placeholder.com/400x200?text=LINE+Developer", // Placeholder image
+    price: 1990,
+    salePrice: 1290,
   },
   {
     id: 2,
@@ -28,6 +31,8 @@ const courses = [
     details:
       "คอร์สนี้ เราจะมาสอนคุณใช้ TOTP ด้วย Google Authenticator ตั้งแต่เริ่มต้นจนถึงใช้งานจริงใน Production เพื่อความปลอดภัยให้ Application ของคุณ และยังเป็นอีกทางเลือกสำหรับ Cost saving อีกด้วย",
     image: "https://via.placeholder.com/400x200?text=Google+Authenticator", // Placeholder image
+    price: 1290,
+    salePrice: 790,
   },
 ];
 
@@ -46,6 +51,8 @@ const CourseList = () => {
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
+                  cursor: "pointer",
+                  position: "relative",
                 }}
               >
                 <CardMedia
@@ -55,20 +62,44 @@ const CourseList = () => {
                   alt={course.title}
                   sx={{ objectFit: "cover" }} // Ensures the image covers the area
                 />
+                <Chip
+                  label="เร็วๆนี้"
+                  size="small"
+                  color="primary"
+                  sx={{
+                    position: "absolute",
+                    top: 5,
+                    right: 5,
+                    color: "white",
+                  }}
+                />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="h5" component="div">
+                  <Typography variant="body" component="div">
                     {course.title}
                   </Typography>
-                  <Typography color="text.secondary">
-                    วันที่: {course.date}
-                  </Typography>
-                  <Typography variant="body2">
-                    รายละเอียด: {course.details}
-                  </Typography>
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                  ></Typography>
+                  <Typography variant="caption">{course.details}</Typography>
                   <Divider sx={{ mt: 2, mb: 1 }} />
-                  <Stack direction={"row"} justifyContent={"space-between"}>
-                    <Typography variant="body2">ออนไลน์</Typography>
-                    <Typography variant="body2">1290 THB</Typography>
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"space-between"}
+                    sx={{ mb: -2 }}
+                  >
+                    <Chip label="ออนไลน์" size="small" color="success" />
+                    <Stack direction={"row"} spacing={2}>
+                      <Typography
+                        variant="body2"
+                        sx={{ textDecoration: "line-through" }}
+                      >
+                        {course.price.toLocaleString()} THB
+                      </Typography>
+                      <Typography variant="body2" color="error">
+                        {course.salePrice.toLocaleString()} THB
+                      </Typography>
+                    </Stack>
                   </Stack>
                 </CardContent>
               </Card>
