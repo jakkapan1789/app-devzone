@@ -11,6 +11,7 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
 // Sample course data with images
 const courses = [
@@ -21,8 +22,8 @@ const courses = [
     details:
       "คอร์สนี้ เราจะมาสอนคุณสู่การเป็น LINE Developer, ตั้งแต่เริ่มต้นจนถึงใช้งานจริงใน Production เช่น การ Login ด้วย LINE LIFF รวมถึงส่งข้อความหาไลน์โดยเลือกเป้าหมาย ด้วย Mesaaging API",
     image: "https://via.placeholder.com/400x200?text=LINE+Developer", // Placeholder image
-    price: 1990,
-    salePrice: 1290,
+    price: 990,
+    salePrice: 490,
   },
   {
     id: 2,
@@ -31,12 +32,13 @@ const courses = [
     details:
       "คอร์สนี้ เราจะมาสอนคุณใช้ TOTP ด้วย Google Authenticator ตั้งแต่เริ่มต้นจนถึงใช้งานจริงใน Production เพื่อความปลอดภัยให้ Application ของคุณ และยังเป็นอีกทางเลือกสำหรับ Cost saving อีกด้วย",
     image: "https://via.placeholder.com/400x200?text=Google+Authenticator", // Placeholder image
-    price: 1290,
-    salePrice: 790,
+    price: 590,
+    salePrice: 249,
   },
 ];
 
 const CourseList = () => {
+  const route = useRouter();
   return (
     <Box id="course" sx={{ py: 10, backgroundColor: "#f5f5f5" }}>
       <Container maxWidth="lg" data-aos="fade-up" data-aos-duration="1000">
@@ -74,7 +76,11 @@ const CourseList = () => {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="body" component="div">
+                  <Typography
+                    variant="body"
+                    component="div"
+                    // onClick={() => route.push(`/course/${course.id}`)}
+                  >
                     {course.title}
                   </Typography>
                   <Typography

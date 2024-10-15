@@ -3,17 +3,14 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Head from "next/head";
 import getLPTheme from "@/data/getLPTheme";
 import MainLayout from "@/components/Layout/MainLayout";
-import ProposalLayout from "@/components/Layout/ProposalLayout";
 import Aos from "aos";
 
 import Hero from "@/components/Hero/Hero";
-import Projects from "@/components/Projects/Projects";
 import Packages from "@/components/Packages/Packages";
 import Services from "@/components/Services/Services";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
 import CourseList from "@/components/CourseList/CourseList";
-import ClientExamples from "@/components/ClientExamples/ClientExamples";
 
 export default function Home() {
   const LPtheme = createTheme(getLPTheme("light"));
@@ -22,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <ThemeProvider theme={LPtheme}>
+    <>
       <Head>
         <title>App-DevZone</title>
         <meta name="description" content="Powered by App-DevZone" />
@@ -38,6 +35,6 @@ export default function Home() {
         {/* <ClientExamples /> */}
         <Contact />
       </MainLayout>
-    </ThemeProvider>
+    </>
   );
 }
